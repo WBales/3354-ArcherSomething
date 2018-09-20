@@ -30,7 +30,7 @@ SMS - Short Message Service
   3.9 Delete messages older than 30 days. <br/>
   
 4.	Data storage<br/>
-  4.1 Account Data will be stored in cloud.<br/>z
+  4.1 Account Data will be stored in cloud.<br/>
   4.2 Database will process requests to accounts changes.<br/>
   4.3 Backups of message logs stored<br/>
   4.4 Contact Data is stored in cloud and accessible by account<br/>
