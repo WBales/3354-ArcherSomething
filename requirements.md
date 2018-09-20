@@ -29,6 +29,13 @@ SMS - Short Message Service
   3.8 Search received or sent messages by text contents. <br/>
   3.9 Delete messages older than 30 days. <br/>
   
+5. Delete account. <br/>
+5.0 Prompts user for password verification before deleting. <br/>
+5.1 Adds option to either make a permanent deletion or recoverable deletion. <br/>
+5.2 Sends an email to account holder informing them of deletion. <br/> 
+
+
+  
 
 
 #### **Use-Case Diagram** <br/>
