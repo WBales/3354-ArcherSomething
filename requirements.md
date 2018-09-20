@@ -29,10 +29,16 @@ SMS - Short Message Service
   3.8 Search received or sent messages by text contents. <br/>
   3.9 Delete messages older than 30 days. <br/>
   
+4.	Data storage<br/>
+  4.1 Account Data will be stored in cloud.<br/>z
+  4.2 Database will process requests to accounts changes.<br/>
+  4.3 Backups of message logs stored<br/>
+  4.4 Contact Data is stored in cloud and accessible by account<br/>
+ 
 5. Delete account. <br/>
-5.0 Prompts user for password verification before deleting. <br/>
-5.1 Adds option to either make a permanent deletion or recoverable deletion. <br/>
-5.2 Sends an email to account holder informing them of deletion. <br/> 
+  5.1 Prompts user for password verification before deleting. <br/>
+  5.2 Adds option to either make a permanent deletion or recoverable deletion. <br/>
+  5.3 Sends an email to account holder informing them of deletion. <br/> 
 
 
   
