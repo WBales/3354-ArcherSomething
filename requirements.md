@@ -1,5 +1,5 @@
 #### **Definitions, Acronyms, and Abbreviations** <br/>
-1.0 SMS - Short Message Service
+SMS - Short Message Service
 
 
 #### **Functional Requirements** <br/>
