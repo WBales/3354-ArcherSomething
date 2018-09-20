@@ -27,6 +27,8 @@ SMS - Short Message Service
   3.6 Forward a received message to another user. <br/>
   3.7 Send a message to more than one user. <br/>
   3.8 Search received or sent messages by text contents. <br/>
+  3.9 Delete messages older than 30 days. <br/>
+  
 
 
 #### **Use-Case Diagram** <br/>
