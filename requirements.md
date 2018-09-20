@@ -17,17 +17,15 @@ SMS - Short Message Service
   2.4 System will have link to reset username and password. <br/>
   2.5 Link will be sent to email, where user can update information. <br/>
   2.6 Once user updates information, they can use that information to log in. <br/>
-
-3. Users will be available to access their messages in a mailbox. <br/>
-  3.1 User can receive messages to their mailbox. <br/>
-  3.2 Messages can be deleted from the mailbox. <br/>
-  3.3 Drafts, or incomplete messages, can be created. <br/>
-  3.4 Send messages or drafts. <br/>
-  3.5 Reply to received messages. <br/>
-  3.6 Forward a received message to another user. <br/>
-  3.7 Send a message to more than one user. <br/>
-  3.8 Search received or sent messages by text contents. <br/>
-  3.9 Delete messages older than 30 days. <br/>
+  
+3.  Messages can be deleted from the mailbox. <br/>
+  3.1 Drafts, or incomplete messages, can be created. <br/>
+  3.2 Send messages or drafts. <br/>
+  3.3 Reply to received messages. <br/>
+  3.4 Forward a received message to another user. <br/>
+  3.5 Send a message to more than one user. <br/>
+  3.6 Search received or sent messages by text contents. <br/>
+  3.7 Delete messages older than 30 days. <br/>
   
 4.	Data storage<br/>
   4.1 Account Data will be stored in cloud.<br/>
