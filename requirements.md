@@ -37,9 +37,3 @@ SMS - Short Message Service
   5.1 Once user chooses to delete, user will be informed that data will be lost for good. <br/>
   5.2 User will be asked if this is what they really want?. <br/>
   5.3 Once user deletes account all data will be erased. <br/> 
-
-
-  
-
-
-#### **Use-Case Diagram** <br/>
