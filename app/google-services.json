@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "159645167304",
+    "firebase_url": "https://ranged-battle.firebaseio.com",
+    "project_id": "ranged-battle",
+    "storage_bucket": "ranged-battle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159645167304:android:c1e8fdd4bfea2ca9",
+        "android_client_info": {
+          "package_name": "com.rangedbattle.firebasechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159645167304-o8f6k1bgb28ciksg84s0up2hrqm1jum2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoOLlC3KTKI5tLY2hzS5Aj2bk3-BNkmsY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
