@@ -3,6 +3,7 @@ package com.rangedbattle.firebasechat;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.VisibleForTesting;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -81,12 +82,14 @@ public class RegisterActivity extends AppCompatActivity {
         // Store values at the time of the login attempt.
         String email = emailView.getText().toString();
         String password = passwordView.getText().toString();
+        String confirmPassword = confirmPasswordView.getText().toString();
+
 
         boolean cancel = false;
         View focusView = null;
 
         // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+        if (!TextUtils.isEmpty(password) && !isPasswordValid(password,confirmPassword)) {
             passwordView.setError(getString(com.rangedbattle.firebasechat.R.string.error_invalid_password));
             focusView = passwordView;
             cancel = true;
@@ -119,10 +122,12 @@ public class RegisterActivity extends AppCompatActivity {
         return email.contains("@");
     }
 
-    private boolean isPasswordValid(String password) {
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)  boolean isPasswordValid(String password, String confirmPassword) {
         //TODO: Add own logic to check for a valid password
-        String confirmPassword = confirmPasswordView.getText().toString();
-        return confirmPassword.equals(password) && password.length() > 4;
+
+        return confirmPassword.equals(password) && password.length() > 4 && (password.contains("!")||password.contains("@")||
+                password.contains("#")||password.contains("$")||password.contains("%")||password.contains("^")||password.contains("&")
+                ||password.contains("*")||password.contains("(")||password.contains(")"));
     }
 
     // TODO: Create a Firebase user
