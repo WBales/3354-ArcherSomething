@@ -119,15 +119,17 @@ public class ChatListAdapter extends BaseAdapter {
         return convertView;
     }
 
-    private void setChatRowAppearance(boolean isItMe, ViewHolder holder) {
+    /**This method decides the appearance of the message on the screen. Sent messages are in a green box and
+     * received messages are in a blue box.
+     * @param chatFromSender - Boolean value to decide the holder is the sender or receiver of a message
+     * @param holder - ViewHolder object that contains a TextView for the author's name and the contents of a
+     *               message.
+     */
+    private void setChatRowAppearance(boolean chatFromSender, ViewHolder holder) {
 
-        if (isItMe) {
-
-
+        if (chatFromSender) {
             holder.params.gravity = Gravity.END;
             holder.authorName.setTextColor(Color.BLACK);
-
-
             holder.body.setBackgroundResource(com.rangedbattle.firebasechat.R.drawable.bubble2);
         } else {
             holder.params.gravity = Gravity.START;

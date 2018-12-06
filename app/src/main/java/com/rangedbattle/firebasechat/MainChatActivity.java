@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainChatActivity extends AppCompatActivity {
 
     // TODO: Add member variables here:
-    private String displayname;
+    private String displayName;
     private ListView chatListView;
     private EditText inputText;
     private ImageButton sendButton;
@@ -64,7 +64,7 @@ public class MainChatActivity extends AppCompatActivity {
     // TODO: Retrieve the display name from the Shared Preferences
     private void setupDisplayName(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        displayname = user.getDisplayName();
+        displayName = user.getDisplayName();
     }
 
     private void sendMessage() {
@@ -73,7 +73,7 @@ public class MainChatActivity extends AppCompatActivity {
         // TODO: Grab the text the user typed in and push the message to Firebase
         String input = inputText.getText().toString();
         if (!input.equals("")) {
-            InstantMessage chat = new InstantMessage(input, displayname);
+            InstantMessage chat = new InstantMessage(input, displayName);
             databaseReference.child("messages").push().setValue(chat);
             inputText.setText("");
         }
@@ -84,7 +84,7 @@ public class MainChatActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        adapter = new ChatListAdapter(this, databaseReference, displayname);
+        adapter = new ChatListAdapter(this, databaseReference, displayName);
         chatListView.setAdapter(adapter);
     }
 

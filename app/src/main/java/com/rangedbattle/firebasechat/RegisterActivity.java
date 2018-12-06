@@ -174,7 +174,7 @@ public class RegisterActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Log.d("FlashChat", "User name updated.");
+                                Log.d("Battle Chat", "User name updated.");
                             }
                         }
                     });
