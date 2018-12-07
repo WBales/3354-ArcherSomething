@@ -34,3 +34,13 @@ Instructions to build and use the software:
 4.	After gradle sync completes, Build the project.
 5.	Choose an emulator, or a connected android device with developer options enabled.
 6.	Use the software from emulator or device.
+
+Using the Application
+Login Screen - 
+Enter email and password, or click register.
+Registration - 
+Enter information to make an account.
+Chat room - 
+send messages and recieve messages from Chat Room.
+
+Documentation can be found in folder titled "JavaDoc"
