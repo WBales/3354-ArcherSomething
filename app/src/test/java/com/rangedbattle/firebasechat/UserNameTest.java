@@ -5,6 +5,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**This class tests the method that tests the user names
+ *
+ */
 public class UserNameTest {
 
     private RegisterActivity tester;
