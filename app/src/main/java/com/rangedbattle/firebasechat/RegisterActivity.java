@@ -141,6 +141,10 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
+    /**Verifies the username only contains characters A-Z, upper or lowercase, and has at least 6 characters.
+     * @param userName
+     * @return
+     */
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE) boolean isUserNameValid(String userName){
         if(userName.length() <= 5){
             return false;           //Return false if the userName is too short

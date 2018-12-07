@@ -5,6 +5,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**This class test the method that tests the password
+ *
+ */
 public class PasswordTest {
 
     private RegisterActivity tester;
