@@ -17,8 +17,15 @@ We used Android View Holder Design Pattern in the getView method.
 
 1.2. 
 Location of four test cases: 
-Leo’s test cases for password validation, Thomas’ test cases for email validation are here:
-3354-Ranged-Battle\app\src\main\java\com\rangedbattle\firebasechat\RegisterActivityTest.Java
+Leo’s test case for password validation: 
+3354-Ranged-Battle\app\src\main\java\com\rangedbattle\firebasechat\PasswordTest.Java
+Thomas’ test case for email validation:
+3354-Ranged-Battle\app\src\main\java\com\rangedbattle\firebasechat\EmailTest.Java
+Wes' test case for username validation:
+3354-Ranged-Battle\app\src\main\java\com\rangedbattle\firebasechat\UserNameTest.Java
+Brad's test case for PG message content:
+3354-Ranged-Battle\app\src\main\java\com\rangedbattle\firebasechat\PGTest.Java
+
 1.3. 
 Instructions to build and use the software:
 1.	Create clone of 3354-Ranged-Battle.
