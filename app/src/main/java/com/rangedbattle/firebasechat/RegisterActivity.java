@@ -129,13 +129,39 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
-    /** Verifies the email contains an @ symbol.
+    /** Verifies the email contains one and only one @ symbol.
      * @param email - String for the user's email address
-     * @return
+     * @return true - passes validation tests
      */
-    private boolean isEmailValid(String email) {
-        // You can add more checking logic here.
-        return email.contains("@");
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE) boolean isEmailValid(String email) {
+        boolean atSign = false;
+        boolean extension = false;
+        email = email.trim();
+        int length = email.length();
+
+        // a@b.ext is smallest possible, test length
+        if(length < 7) return false;
+
+        // check if there is one, and only one @ sign
+        for(int i=0;i<email.length();i++) {
+            if (email.charAt(i) == '@') {
+                if (atSign) return false; //@ sign found
+                else atSign = true;
+            }
+        }
+
+        String extensions[] = {".com",".net",".edu",".org"};
+        String possibleExt = email.substring(length-4,length).toLowerCase();
+
+        for(int e = 0; e < 4; e++) {
+            if (extensions[e].equals(possibleExt)) {
+                extension = true;
+            }
+        }
+
+        if(extension && atSign) return true;
+
+        return false;
     }
 
     /** Checks that the password contains requisite security requirements.
