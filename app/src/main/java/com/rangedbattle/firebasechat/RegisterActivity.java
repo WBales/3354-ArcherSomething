@@ -90,8 +90,10 @@ public class RegisterActivity extends AppCompatActivity {
         // Reset errors displayed in the form.
         emailView.setError(null);
         passwordView.setError(null);
+        usernameView.setError(null);
 
         // Store values at the time of the login attempt.
+        String userName = usernameView.getText().toString();
         String email = emailView.getText().toString();
         String password = passwordView.getText().toString();
         String confirmPassword = confirmPasswordView.getText().toString();
@@ -118,6 +120,16 @@ public class RegisterActivity extends AppCompatActivity {
             cancel = true;
         }
 
+        if (TextUtils.isEmpty(userName)){
+            usernameView.setError(getString(com.rangedbattle.firebasechat.R.string.error_field_required));
+            focusView = usernameView;
+            cancel = true;
+        } else if (!isUserNameValid(userName)){
+            usernameView.setError(getString(com.rangedbattle.firebasechat.R.string.error_invalid_username));
+            focusView = usernameView;
+            cancel = true;
+        }
+
         if (cancel) {
             // There was an error; don't attempt login and focus the first
             // form field with an error.
@@ -127,6 +139,19 @@ public class RegisterActivity extends AppCompatActivity {
             createFirebaseUser();
 
         }
+    }
+
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE) boolean isUserNameValid(String userName){
+        if(userName.length() <= 5){
+            return false;           //Return false if the userName is too short
+        }
+
+        if(userName.matches("^[A-Za-z]+$")){
+            return true;            //Return true if username meets requirements
+        }
+
+        return false;                //Return false if userName fails conditions
+
     }
 
     /** Verifies the email contains one and only one @ symbol.

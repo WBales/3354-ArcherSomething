@@ -10,8 +10,9 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="action_sign_up">Sign up</string>
     <string name="action_send">Send</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">Password too short or does not match</string>
+    <string name="error_invalid_username">Needs must be at least 6 characters and have no symbols or numbers</string>
+    <string name="error_invalid_email">Can only have 1 @ and must be .edu, .com, .net, .org</string>
+    <string name="error_invalid_password">Password must contain 1 symbol, number, and at least 6 characters</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
