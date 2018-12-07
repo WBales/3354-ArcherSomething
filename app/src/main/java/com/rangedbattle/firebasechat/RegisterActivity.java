@@ -23,6 +23,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
 
+/** Allows the user to register a new user with the firebase database.
+ *
+ */
 public class RegisterActivity extends AppCompatActivity {
 
     // Constants
@@ -40,6 +43,9 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth auth;
 
 
+    /** Creates the page for the user to register.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,11 +74,17 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    /** Calls the private registration method to attempt to register a user.
+     * @param v - View for the signup page
+     */
     // Executed when Sign Up button is pressed.
     public void signUp(View v) {
         attemptRegistration();
     }
 
+    /**Registers a new user if the email and password are correct. This is private and called by the class.
+     *
+     */
     private void attemptRegistration() {
 
         // Reset errors displayed in the form.
@@ -117,11 +129,20 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
+    /** Verifies the email contains an @ symbol.
+     * @param email - String for the user's email address
+     * @return
+     */
     private boolean isEmailValid(String email) {
         // You can add more checking logic here.
         return email.contains("@");
     }
 
+    /** Checks that the password contains requisite security requirements.
+     * @param password - String for the users password
+     * @param confirmPassword - String to verify the user entered the same password
+     * @return - True or False for the validity of the password
+     */
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)  boolean isPasswordValid(String password, String confirmPassword) {
         //TODO: Add own logic to check for a valid password
 
@@ -130,6 +151,9 @@ public class RegisterActivity extends AppCompatActivity {
                 ||password.contains("*")||password.contains("(")||password.contains(")"));
     }
 
+    /**Creates a user in firebase with given data.
+     *
+     */
     // TODO: Create a Firebase user
     private void createFirebaseUser() {
 
@@ -159,6 +183,9 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
+    /**Saves the user display name in firebase.
+     *
+     */
     private void saveDisplayName() {
 
         FirebaseUser user = auth.getCurrentUser();
@@ -183,6 +210,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    /**Error dialog box
+     * @param message - Registration error message
+     */
     // TODO: Create an alert dialog to show in case registration failed
     private void showErrorDialog(String message){
 

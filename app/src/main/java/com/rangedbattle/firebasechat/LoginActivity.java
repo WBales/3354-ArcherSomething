@@ -20,6 +20,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
+/** Creates the main login screen for the app.
+ *
+ */
 public class LoginActivity extends AppCompatActivity {
 
     // TODO: Add member variables here:
@@ -28,6 +31,9 @@ public class LoginActivity extends AppCompatActivity {
     private AutoCompleteTextView emailView;
     private EditText passwordView;
 
+    /** Creates the activity to login. This is the entry page for the app.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +58,9 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    /** User login.
+     * @param v
+     */
     // Executed when Sign in button pressed
     public void signInExistingUser(View v)   {
         // TODO: Call attemptLogin() here
@@ -59,6 +68,9 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    /** Calls the registration page for a new user.
+     * @param v - The register view
+     */
     // Executed when Register button pressed
     public void registerNewUser(View v) {
         Intent intent = new Intent(this, com.rangedbattle.firebasechat.RegisterActivity.class);
@@ -66,6 +78,10 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /** Attempts to login. If the login is successful the MainChatActivity loads. If not an error message
+     * is displayed.
+     *
+     */
     // TODO: Complete the attemptLogin() method
     private void attemptLogin() {
 

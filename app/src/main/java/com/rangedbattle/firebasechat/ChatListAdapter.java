@@ -18,6 +18,9 @@ import com.google.firebase.database.DatabaseReference;
 
 import java.util.ArrayList;
 
+/** Facilitates communication from the app to firebase.
+ *
+ */
 public class ChatListAdapter extends BaseAdapter {
 
     private Activity activity;
@@ -55,6 +58,11 @@ public class ChatListAdapter extends BaseAdapter {
         }
     };
 
+    /** Acts as an intermediary between the app and the database.
+     * @param activity
+     * @param ref
+     * @param name
+     */
     public ChatListAdapter(Activity activity, DatabaseReference ref, String name) {
 
         this.activity = activity;
@@ -88,6 +96,13 @@ public class ChatListAdapter extends BaseAdapter {
         return 0;
     }
 
+    /** Generates the listview of the chat messages. This uses the Android Viewholder Design pattern to create a list
+     * that scrolls smoothly and maintains a list of messages and user names received.
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
