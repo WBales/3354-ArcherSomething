@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class RegisterActivityTest {
+public class PasswordTest {
 
     private RegisterActivity tester;
     public String input;
