@@ -16,6 +16,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 
+/** Main chat screen for that displays all messages sent. Allows user to send a new message.
+ *
+ */
 public class MainChatActivity extends AppCompatActivity {
 
     // TODO: Add member variables here:
@@ -26,6 +29,9 @@ public class MainChatActivity extends AppCompatActivity {
     private DatabaseReference databaseReference;
     private ChatListAdapter adapter;
 
+    /** Creates the chat activity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,12 +67,18 @@ public class MainChatActivity extends AppCompatActivity {
 
     }
 
+    /** Gets the users name from the database
+     *
+     */
     // TODO: Retrieve the display name from the Shared Preferences
     private void setupDisplayName(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         displayName = user.getDisplayName();
     }
 
+    /** Sends the message and username to the database
+     *
+     */
     private void sendMessage() {
 
         Log.d("Chat", "I sent something");
